@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "354318705796",
+    "firebase_url": "https://judo-interaction-pt-default-rtdb.firebaseio.com",
+    "project_id": "judo-interaction-pt",
+    "storage_bucket": "judo-interaction-pt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354318705796:android:c586e13521bdffd0be0ed1",
+        "android_client_info": {
+          "package_name": "com.example.judointeractionpt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354318705796-cqulm0g66skbbcbpuur1cik3s2ac77q2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.judointeractionpt",
+            "certificate_hash": "4e752a5cd080d208b8441ed5ca5fb3baa44ea6ee"
+          }
+        },
+        {
+          "client_id": "354318705796-9ci7oj5ufaq18pebi9cbc4621s3mb9pr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR2d7G7vqMWFmynovZMX4Uu4mtGv5ksn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354318705796-9ci7oj5ufaq18pebi9cbc4621s3mb9pr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

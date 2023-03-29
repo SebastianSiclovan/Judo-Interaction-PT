@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Judo Interaction PT</string>
+
+    <string name="mRemember">com.example.footballinteractionpt.mRemember</string>
+    <string name="mEmail">com.example.footballinteractionpt.mEmail</string>
+    <string name="mPassword">com.example.footballinteractionpt.mPassword</string>
+
+
+    <string name="facebook_app_id">1201830230457336</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="judo_clubs">
+        <item>Judo Club Zadareni</item>
+        <item>Judo Club Timisoara</item>
+        <item>Judo Club Bucuresti</item>
+    </string-array>
+
+
+</resources>
