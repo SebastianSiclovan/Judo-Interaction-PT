@@ -409,7 +409,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:drawableLeft="@drawable/ic_icons8_red_circle_48"
+        android:drawableLeft="@drawable/ic_icons8_yellow_circle_48"
         android:drawablePadding="5dp"
         android:fontFamily="sans-serif"
         android:textColor="#ffffff"
