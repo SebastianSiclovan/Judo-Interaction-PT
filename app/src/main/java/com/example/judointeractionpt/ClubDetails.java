@@ -25,8 +25,10 @@ import java.util.Objects;
 public class ClubDetails extends AppCompatActivity {
 
     ImageView backBtn;
-    TextView clubName, trainerName, locationAdress, contactPhone, clubMembers;
+    TextView clubName, trainerName, locationAdress, contactPhone;
     TextView scheduleMonday, scheduleTuesday, scheduleWednesday, scheduleThursday, scheduleFriday, scheduleSaturday, scheduleSunday;
+
+
 
     FirebaseUser user;
     DatabaseReference userRef;
@@ -44,7 +46,6 @@ public class ClubDetails extends AppCompatActivity {
         trainerName = findViewById(R.id.trainer_var);
         locationAdress = findViewById(R.id.location_var);
         contactPhone = findViewById(R.id.contact_var);
-        clubMembers = findViewById(R.id.members_var);
 
         scheduleMonday = findViewById(R.id.monday_var);
         scheduleTuesday = findViewById(R.id.tuesday_var);
@@ -81,17 +82,52 @@ public class ClubDetails extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                // variables to show info for Judo Club Zadareni
+                String TrainerName_forZadareni = "Andrei loghin";
+                String locationAdress_forZadareni = "Zadareni, str principala";
+                String contactPhone_forZadareni = "+40 xxxxxxxx";
+                String [] hoursWeek_forZadareni = new String[] {"08:00-16:00", "09:00-16:00", "10:00-16:00", "09:00-16:00", "11:00-16:00", "13:00-16:00", "closed"};
+
+                // variables to show info for Judo Club Timisoara
+                String TrainerName_forTimisoara = "Raul Xipas";
+                String locationAdress_forTimisoara = "Timisoara, Bd-ul Eroilor Tisa, nr. 11";
+                String contactPhone_forTimisoara = "+50 xxxxxxxx";
+                String [] hoursWeek_forTimisoara = new String[] {"08:30-16:30", "09:30-16:30", "10:30-16:30", "09:30-16:30", "11:30-16:00", "14:00-17:00", "closed"};
+
+
+                TextView[] schedules = new TextView[] {scheduleMonday, scheduleTuesday, scheduleWednesday, scheduleThursday, scheduleFriday, scheduleSaturday, scheduleSunday};
                 User user = snapshot.getValue(User.class);
+
+
+
+
 
                 judoClub = user.getJudoclub();
 
                 if (Objects.equals(judoClub, "Judo Club Zadareni"))
                 {
                     clubName.setText(judoClub);
-                    trainerName.setText("Andrei loghin");
-                    locationAdress.setText("Zadareni, str principala");
-                    contactPhone.setText("+40 xxxxxxxx");
+                    trainerName.setText(TrainerName_forZadareni);
+                    locationAdress.setText(locationAdress_forZadareni);
+                    contactPhone.setText(contactPhone_forZadareni);
 
+                    for (int i = 0; i < hoursWeek_forZadareni.length; i++)
+                    {
+                        schedules[i].setText(hoursWeek_forZadareni[i]);
+                    }
+
+                }
+                else if (Objects.equals(judoClub, "Judo Club Timisoara"))
+                {
+                    clubName.setText(judoClub);
+                    trainerName.setText(TrainerName_forTimisoara);
+                    locationAdress.setText(locationAdress_forTimisoara);
+                    contactPhone.setText(contactPhone_forTimisoara);
+
+                    for (int i = 0; i < hoursWeek_forZadareni.length; i++)
+                    {
+                        schedules[i].setText(hoursWeek_forTimisoara[i]);
+                    }
                 }
 
 
