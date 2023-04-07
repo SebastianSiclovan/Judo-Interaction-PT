@@ -100,32 +100,6 @@ public class Login extends AppCompatActivity {
 
 
 
-        /*
-
-        callbackManager = CallbackManager.Factory.create();
-
-        LoginManager.getInstance().registerCallback(callbackManager,
-                new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {
-                        // App code
-                        startActivity(new Intent(Login.this, ProfileConfigurationFacebook.class));
-                        finish();
-                    }
-
-                    @Override
-                    public void onCancel() {
-                        // App code
-                    }
-
-                    @Override
-                    public void onError(FacebookException exception) {
-                        // App code
-                    }
-                });
-
-         */
-
 
 
 
@@ -141,20 +115,6 @@ public class Login extends AppCompatActivity {
                 //startActivity(new Intent(getApplicationContext(), Register.class));
             }
         });
-        /*
-        facebookBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-
-                LoginManager.getInstance().logInWithReadPermissions(Login.this, Arrays.asList("public_profile","email"));
-
-
-            }
-        });
-
-         */
 
 
 
