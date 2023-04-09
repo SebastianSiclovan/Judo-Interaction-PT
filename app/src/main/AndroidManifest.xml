@@ -18,28 +18,31 @@
         android:theme="@style/Theme.FootballInteractionPT"
         tools:targetApi="31">
         <activity
-            android:name="com.example.judointeractionpt.GroupSessions"
+            android:name=".EditEmail"
             android:exported="true" />
         <activity
-            android:name="com.example.judointeractionpt.JudoBelts"
+            android:name=".GroupSessions"
             android:exported="true" />
         <activity
-            android:name="com.example.judointeractionpt.ClubDetails"
+            android:name=".JudoBelts"
             android:exported="true" />
         <activity
-            android:name="com.example.judointeractionpt.EditProfile"
+            android:name=".ClubDetails"
             android:exported="true" />
         <activity
-            android:name="com.example.judointeractionpt.Register"
+            android:name=".EditProfile"
             android:exported="true" />
         <activity
-            android:name="com.example.judointeractionpt.Login"
+            android:name=".Register"
             android:exported="true" />
         <activity
-            android:name="com.example.judointeractionpt.MainActivity"
+            android:name=".Login"
             android:exported="true" />
         <activity
-            android:name="com.example.judointeractionpt.FirstActivity"
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
