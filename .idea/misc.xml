@@ -74,16 +74,21 @@
         <entry key="..\:/Football-interaction-PT---mobile-Application/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Football-interaction-PT---mobile-Application/app/src/main/res/layout/fragment_settings.xml" value="0.25416666666666665" />
         <entry key="..\:/Football-interaction-PT---mobile-Application/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_club_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_edit_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/drawable/facebook_background.xml" value="0.2745" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_club_details.xml" value="0.33" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_edit_email.xml" value="0.42916666666666664" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_edit_password.xml" value="0.42916666666666664" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_edit_profile.xml" value="0.5" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_first.xml" value="0.25416666666666665" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_group_sessions.xml" value="0.25416666666666665" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_judo_belts.xml" value="0.25416666666666665" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_main.xml" value="0.42916666666666664" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
-        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/fragment_settings.xml" value="0.25416666666666665" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/fragment_settings.xml" value="0.33" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/menu/bottom_nav_menu.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/siclo/AndroidStudioProjects/FootballInteractionPT/app/src/main/res/drawable/boxes_bg.xml" value="0.194" />
         <entry key="..\:/Users/siclo/AndroidStudioProjects/FootballInteractionPT/app/src/main/res/drawable/facebook_backgroubd.xml" value="0.194" />
         <entry key="..\:/Users/siclo/AndroidStudioProjects/FootballInteractionPT/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2135" />
