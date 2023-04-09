@@ -92,7 +92,7 @@ public class EditEmail extends AppCompatActivity {
                 if (TextUtils.isEmpty(user_password))
                 {
                     password.setError("Password is required");
-                    newEmail.requestFocus();
+                    password.requestFocus();
                     return;
                 }
                 else
