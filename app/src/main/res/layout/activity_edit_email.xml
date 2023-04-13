@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,151 +7,137 @@
     android:background="@drawable/rosu_judo"
     tools:context=".EditEmail">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/EditEmail_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:paddingLeft="13dp"
-        android:paddingTop="5dp"
-        android:text="You can update your email adress now. Please enter your password and verify before continuing"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/crem"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            android:id="@+id/RL_email">
 
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/EditEmail_currentEmail"
-        style="@android:style/Widget.Material.EditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/boxes_bg"
-
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Current email"
-        android:padding="8dp"
-        android:textColor="#c000"
-        android:textColorHint="#c000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditEmail_text"
-        app:layout_constraintVertical_bias="0.037" />
+            <TextView
+                android:id="@+id/EditEmail_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="You can update your email adress now. Please enter your password and verify before continuing"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
 
-    <EditText
-        android:id="@+id/EditEmail_password"
-        style="@android:style/Widget.Material.EditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/boxes_bg"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="Enter your password"
-        android:padding="8dp"
-        android:textColor="#c000"
-        android:textColorHint="#c000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditEmail_currentEmail"
-        app:layout_constraintVertical_bias="0.037" />
+            <TextView
+                android:id="@+id/EditEmail_currentEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EditEmail_text"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/boxes_bg"
+                android:padding="6dp"
+                android:text="Current Email"
+                android:textColor="#000000"
+                android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/EditEmail_verifyBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/signin_signup_background"
-        android:text="Verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditEmail_password" />
+            <EditText
+                android:id="@+id/EditEmail_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EditEmail_currentEmail"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/boxes_bg"
+                android:inputType="textPassword"
+                android:padding="6dp"
+                android:hint="Enter your password"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
 
-    <View
-        android:id="@+id/view1"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="32dp"
-        android:background="#ffffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditEmail_verifyBtn"
-        tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/EditEmail_verifyBtn"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EditEmail_password"
+                android:background="@drawable/signin_signup_background"
+                android:text="Verify"/>
 
-    <TextView
-        android:id="@+id/EditEmail_updateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="404dp"
-        android:gravity="center"
-        android:paddingLeft="13dp"
-        android:paddingTop="5dp"
-        android:text="Your profile is not verified yet!"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/EditEmail_newEmail"
-        style="@android:style/Widget.Material.EditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/boxes_bg"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Enter your new email"
-        android:padding="8dp"
-        android:textColor="#c000"
-        android:textColorHint="#c000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditEmail_updateText"
-        app:layout_constraintVertical_bias="0.037" />
-
-    <Button
-        android:id="@+id/EditEmail_changeEmailBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/boxes_bg"
-        android:text="Change Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditEmail_newEmail" />
+        </RelativeLayout>
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/crem"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            android:layout_below="@+id/RL_email">
+
+            <TextView
+                android:id="@+id/EditEmail_updateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:padding="6dp"
+                android:text="Your profile is not verified yet!"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/EditEmail_newEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EditEmail_updateText"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/boxes_bg"
+                android:hint="Enter your new email"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/EditEmail_changeEmailBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EditEmail_newEmail"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/boxes_bg"
+                android:text="Change Email" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
