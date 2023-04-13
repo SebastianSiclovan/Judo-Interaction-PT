@@ -29,6 +29,7 @@ public class SettingsFragment extends Fragment {
     LinearLayout logout_btn;
     LinearLayout changePassword_btn;
     LinearLayout changeEmail_btn;
+    LinearLayout deleteAccount_btn;
 
     FirebaseAuth FireBase_Auth;
     FirebaseUser user;
@@ -46,6 +47,7 @@ public class SettingsFragment extends Fragment {
         logout_btn = view.findViewById(R.id.logout);
         changePassword_btn = view.findViewById(R.id.changePassword);
         changeEmail_btn = view.findViewById(R.id.changeEmail);
+        deleteAccount_btn = view.findViewById(R.id.deleteAccount);
 
         // Login the user, Firebase instance
         FireBase_Auth = FirebaseAuth.getInstance();
@@ -76,6 +78,14 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        deleteAccount_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), DeleteAccount.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -84,10 +94,13 @@ public class SettingsFragment extends Fragment {
     }
 
     public void logout(View view) {
+        /*
         FirebaseAuth.getInstance().signOut();
         // Clear session data
         SharedPreferences preferences = getActivity().getSharedPreferences("my_preferences", Context.MODE_PRIVATE);
         preferences.edit().clear().apply();
+
+         */
 
         // Redirect to login screen
         Intent intent = new Intent(getActivity(), Login.class);
