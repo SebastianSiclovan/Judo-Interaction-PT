@@ -48,6 +48,8 @@ public class ProfileFragment extends Fragment{
 
         FirebaseFirestore firebaseFirestore;
 
+        FirebaseAuth firebaseAuth;
+
 
 
 
@@ -61,8 +63,10 @@ public class ProfileFragment extends Fragment{
         firebaseFirestore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
 
+        firebaseAuth = FirebaseAuth.getInstance();
 
-        StorageReference profileReference = storageReference.child("users/"+user.getUid()+"/profile.jpg");
+
+        StorageReference profileReference = storageReference.child("Users/" + firebaseAuth.getCurrentUser().getUid() + ".jpg");
         profileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -131,7 +135,7 @@ public class ProfileFragment extends Fragment{
 
     private void uploadImageToFirebase(Uri imageUri) {
         //upload image to firebase Storage
-        StorageReference fileReference = storageReference.child("users/"+user.getUid()+"/profile.jpg");
+        StorageReference fileReference = storageReference.child("Users/" + firebaseAuth.getCurrentUser().getUid() + ".jpg");
         fileReference.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {

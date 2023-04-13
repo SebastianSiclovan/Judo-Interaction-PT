@@ -103,11 +103,7 @@ public class Register extends AppCompatActivity {
 
         // Verification is user is already logged in or not
 
-        if (FireBase_Auth.getCurrentUser() != null) // verify this user is present
-        {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            finish();
-        }
+
 
         // redirect the user from register to login if he press the "Sign In"
 
