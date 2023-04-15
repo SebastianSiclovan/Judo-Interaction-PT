@@ -18,6 +18,12 @@
         android:theme="@style/Theme.FootballInteractionPT"
         tools:targetApi="31">
         <activity
+            android:name=".GroupSessions_forTrainers"
+            android:exported="true" />
+        <activity
+            android:name=".JudoHistory"
+            android:exported="true" />
+        <activity
             android:name=".DeleteAccount"
             android:exported="true" />
         <activity
