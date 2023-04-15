@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rosu_judo"
+    tools:context=".JudoHistory">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/RL_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/crem"
+            android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/informationJudo_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="Some information about judo..."
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/firstText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/informationJudo_text"
+                android:text="Un tip modern de artă marțială japoneză cunoscută sub numele de judoul (pronunțat „giudo”; 柔道 jūdō, „metoda flexibilă/suplă/mlădioasă”), cunoscută și sub numele de Gendai bud. Profesorul Jigoro Kano și-a dezvoltat propriul stil în 1882, bazându-se pe principiile tradiționale de jujitsu și păstrând tehnicile sale de aruncare și recompensă. Acest stil a fost cunoscut sub numele de Kano-ryu și mai târziu și-a schimbat numele în Kodokan Judo."
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/secondText"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstText"
+                android:text="Principiile sale se bazează pe folosirea supleții în locul forței brute, fiind eliminate loviturile și unele luxări periculoase, cum ar fi luxarea degetelor. În judo se folosesc proiectări, secerări, fixări la sol, strangulări și luxări."
+                android:textColor="@color/black"/>
+
+
+            <TextView
+                android:id="@+id/Nr3_Text"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondText"
+                android:text="Practicantul judoului se numește judoka. Sala unde se practică judoul se numește dojo. Echipamentul de judo, numit ,kimano, a fost introdus de către Kano în anul 1907, dar pentru grade folosea, în continuare, numai centuri albe și negre."
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/Nr4_Text"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Nr3_Text"
+                android:text="Există trei categorii de bază ale tehnicii waza (技,arta) în judo: nage-waza (投げ技, arta aruncării), katame-waza (固技, arta fixărilor) și atemi-waza (当て身技, arta loviturilor). Judo este cunoscut mai ales pentru nage-waza și katame-waza."
+                android:textColor="@color/black"/>
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+</ScrollView>
