@@ -178,11 +178,14 @@
                 app:cardElevation="8dp">
 
                 <LinearLayout
+                    android:id="@+id/judoHistory"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="16dp"
                     android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical">
 
 
@@ -191,13 +194,13 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="25dp"
-                        android:src="@drawable/ic_icons8_loading_24"></ImageView>
+                        android:src="@drawable/ic_baseline_info_24"></ImageView>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="38dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="In progress..."
+                        android:text="Judo information"
                         android:textColor="@color/black"
                         android:textSize="16dp"
                         android:textStyle="bold"></TextView>
