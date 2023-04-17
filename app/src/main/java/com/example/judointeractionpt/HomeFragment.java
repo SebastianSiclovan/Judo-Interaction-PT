@@ -3,6 +3,7 @@ package com.example.judointeractionpt;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -10,11 +11,30 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.example.judointeractionpt.Model.User;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
+
+import java.util.Objects;
 
 
 public class HomeFragment extends Fragment {
 
-    LinearLayout clubDetails_btn, judoBelts_btn, groupSessions_btn;
+    LinearLayout clubDetails_btn, judoBelts_btn, groupSessions_btn, judoHistory_btn;
+
+    DatabaseReference userRef;
+    FirebaseUser firebase_user;
+    ;
+
 
 
     @Override
@@ -27,6 +47,12 @@ public class HomeFragment extends Fragment {
         clubDetails_btn = view.findViewById(R.id.clubDetails);
         judoBelts_btn = view.findViewById(R.id.judoBelts);
         groupSessions_btn = view.findViewById(R.id.GroupSessions);
+        judoHistory_btn = view.findViewById(R.id.judoHistory);
+
+
+
+
+
 
         clubDetails_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,14 +73,52 @@ public class HomeFragment extends Fragment {
         groupSessions_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(getActivity(), GroupSessions.class);
+                startActivity(intent);
+
+            }
+
+
+        });
+
+        judoHistory_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), JudoHistory.class);
                 startActivity(intent);
             }
         });
 
 
 
+
         return view;
         }
-    }
+
+
+
+
+                /*
+                store_userEmail = user.getEmail();
+
+                if (store_userEmail == "siclovansebastian@yahoo.com")
+                {
+                    Intent intent = new Intent(getActivity(), GroupSessions_forTrainers.class);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Intent intent = new Intent(getActivity(), GroupSessions.class);
+                    startActivity(intent);
+                }
+
+            }
+
+                 */
+
+
+
+
+}
 

@@ -7,4 +7,108 @@
     android:background="@drawable/rosu_judo"
     tools:context=".GroupSessions">
 
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendarView"
+        android:layout_margin="28dp"
+        android:background="@color/crem"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        tools:layout_editor_absoluteX="14dp">
+
+        <TextView
+            android:id="@+id/GroupSessions_infoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:padding="6dp"
+            android:text="Calendar with training sessions"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/GroupSessions_selectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/GroupSessions_infoText"
+            android:layout_marginTop="0dp"
+            android:hint="Select a date"
+            android:textAlignment="center"
+            android:padding="6dp"
+            android:textColorHint="#c70000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/GroupSessions_showEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/GroupSessions_selectDate"
+            android:layout_marginTop="0dp"
+            android:hint=""
+            android:padding="6dp"
+            android:textColorHint="@color/dark_green"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/GroupSessions_addEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/GroupSessions_showEvent"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/boxes_bg"
+            android:hint="You are a coach, you can enter a training"
+            android:inputType="textEmailAddress"
+            android:padding="6dp"
+            android:textColorHint="#000000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/GroupSessions_addEvent_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/GroupSessions_addEvent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="190dp"
+            android:background="@drawable/green_buttons"
+            android:text="Add training" />
+
+        <Button
+            android:id="@+id/GroupSessions_deleteEvent_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/GroupSessions_addEvent"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/signin_signup_background"
+            android:text="Delete training"
+            app:layout_constraintStart_toEndOf="@id/GroupSessions_addEvent_btn" />
+
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
