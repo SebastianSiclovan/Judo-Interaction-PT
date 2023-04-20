@@ -12,12 +12,15 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
+            android:id="@+id/RL_deleteAcc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@color/crem"
-            android:padding="15dp"
-            android:layout_margin="15dp"
-            android:id="@+id/RL_deleteAcc">
+            android:padding="15dp">
 
             <TextView
                 android:id="@+id/deleteAccount_text"
@@ -29,8 +32,8 @@
                 android:layout_marginBottom="30dp"
                 android:text="You can delete your account now. Please enter your password and verify before continuing"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="20sp" />
 
 
             <EditText
@@ -48,12 +51,12 @@
 
             <Button
                 android:id="@+id/deleteAccount_verifyBtn"
-                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/deleteAccount_Password"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/signin_signup_background"
-                android:text="Verify"/>
+                android:text="Verify" />
 
 
         </RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rosu_judo"
+    tools:context=".All_JudoBelts_classes.Blue_belt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:ignore="ExtreText">
+
+
+        <RelativeLayout
+            android:id="@+id/RL_blueBelt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/crem"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/blueBelt_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:drawableLeft="@drawable/ic_blue_belt_80__5_"
+                android:drawablePadding="50dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL2_blueBelt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@color/crem"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/Blue_belt_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="Blue belt (NI KYU)"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/blue"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/Introduction_blueBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Blue_belt_text"
+                android:text="Presupune un stadiu de avansati si performanta. Candidatul trebuie sa posede centura verde si cel putin 18-24 luni de practică susţinută în judo la grupa de avansaţi, condiţie fizică foarte bună, rezultate sportive la nivel naţional sau internaţional, comportament etic şi moral exemplar "
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/NageWazaText_blueBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Introduction_blueBelt"
+                android:text="NAGE WAZA"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/NageWazaDetails_blueBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NageWazaText_blueBelt"
+                android:layout_marginLeft="10dp"
+                android:text="- Sumi gaeshi\n- Hane goshi\n- Ushiro goshi\n- Utsuri goshi\n- Uki waza\n- Yoko guruma\n- Ura nage\n- Yoko gake "
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/NeWazaText_blueBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NageWazaDetails_blueBelt"
+                android:text="NE WAZA"
+                android:textColor="@color/blue"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/NeWazaDetails_blueBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NeWazaText_blueBelt"
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:text="- Ude garami\n- Ude hisigi ude gatame\n- Hara gatame\n- Waki gatame\n- Ude hisigi juji gatame\n- Ude hisigi ashi gatame"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/federatiaJudo_blueBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NeWazaDetails_blueBelt"
+                android:layout_marginTop="0dp"
+                android:text="(!) Consultati site ul oficial al federatiei romane de judo pentru mai multe detalii despre aceste tehnici sau adresati va antrenorului (!)"
+                android:textColor="@color/red"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+        app:layout_constraintTop_toBottomOf="@+id/GridLayout_belts" />
+    </LinearLayout>
+</RelativeLayout>
+

@@ -62,7 +62,7 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="25dp"
-                        android:src="@drawable/ic_email_edit_outline_icon_139662"></ImageView>
+                        android:src="@drawable/ic_icons8_email_60"></ImageView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="25dp"
-                        android:src="@drawable/ic_change_password_icon"></ImageView>
+                        android:src="@drawable/ic_icons8_password_reset_48"></ImageView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -150,7 +150,7 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="25dp"
-                        android:src="@drawable/ic_icons8_logout_58"></ImageView>
+                        android:src="@drawable/ic_icons8_logout_40"></ImageView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -194,7 +194,7 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="25dp"
-                        android:src="@drawable/ic_delete_account"></ImageView>
+                        android:src="@drawable/ic_icons8_denied_40"></ImageView>
 
                     <TextView
                         android:layout_width="wrap_content"

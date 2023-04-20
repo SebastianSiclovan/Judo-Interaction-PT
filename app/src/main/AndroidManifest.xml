@@ -18,6 +18,24 @@
         android:theme="@style/Theme.FootballInteractionPT"
         tools:targetApi="31">
         <activity
+            android:name=".All_JudoBelts_classes.Brown_belt"
+            android:exported="true" />
+        <activity
+            android:name=".All_JudoBelts_classes.Blue_belt"
+            android:exported="true" />
+        <activity
+            android:name=".All_JudoBelts_classes.Green_belt"
+            android:exported="true" />
+        <activity
+            android:name=".All_JudoBelts_classes.Orange_belt"
+            android:exported="true" />
+        <activity
+            android:name=".All_JudoBelts_classes.White_belt"
+            android:exported="true" />
+        <activity
+            android:name=".All_JudoBelts_classes.Yellow_belt"
+            android:exported="true" />
+        <activity
             android:name=".GroupSessions_forTrainers"
             android:exported="true" />
         <activity

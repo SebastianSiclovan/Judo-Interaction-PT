@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/informationJudo_text"
                 android:text="Un tip modern de artă marțială japoneză cunoscută sub numele de judoul (pronunțat „giudo”; 柔道 jūdō, „metoda flexibilă/suplă/mlădioasă”), cunoscută și sub numele de Gendai bud. Profesorul Jigoro Kano și-a dezvoltat propriul stil în 1882, bazându-se pe principiile tradiționale de jujitsu și păstrând tehnicile sale de aruncare și recompensă. Acest stil a fost cunoscut sub numele de Kano-ryu și mai târziu și-a schimbat numele în Kodokan Judo."
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/secondText"

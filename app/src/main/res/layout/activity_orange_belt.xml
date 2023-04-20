@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rosu_judo"
+    tools:context=".All_JudoBelts_classes.Orange_belt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:ignore="ExtreText">
+
+
+        <RelativeLayout
+            android:id="@+id/RL_orangeBelt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/crem"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/OrangeBelt_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:drawableLeft="@drawable/ic_orange_belt_80__3_"
+                android:drawablePadding="50dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL2_orangeBelt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@color/crem"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/Orange_belt_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="Orange belt (SHI KYU)"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/orange"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/Introduction_orangeBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Orange_belt_text"
+                android:text="Aceasta centura este incardrata in stadiul avansati-incepatori, este destinata pentru judoka posesori ai gradului go kyu se impune un stagiu de pregatire de cel putin 12-18 luni de la obtinerea acestuia."
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/NageWazaText_orangeBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Introduction_orangeBelt"
+                android:text="NAGE WAZA"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:textSize="12dp"/>
+
+
+            <TextView
+                android:id="@+id/NageWazaDetails_orangeBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NageWazaText_orangeBelt"
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:text="- Hiza guruma\n- O soto otoshi\n- O soto gaeshi\n- Koshi guruma\n- Tsuri komi goshi\n- Tai otoshi\n- Okuri ashi barai\n-- Tsubame gaeshi\n- Morete seoi nage\n- Ko soto gake\n- Tsuri komi goshi"
+                android:textColor="@color/black" />
+
+
+            <TextView
+                android:id="@+id/NeWazaText_orangeBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NageWazaDetails_orangeBelt"
+                android:text="NAGE WAZA"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/NeWazaDetails_orangeBelt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NeWazaText_orangeBelt"
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:text="- Kata gatame\n- Gyaku kesa gatame\n- Mune gatame\n- Sankaku gatame\n- Uki gatame"
+                android:textColor="@color/black" />
+
+
+
+        </RelativeLayout>
+
+
+        app:layout_constraintTop_toBottomOf="@+id/GridLayout_belts" />
+    </LinearLayout>
+</RelativeLayout>
+
