@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
 
     DatabaseReference databaseReference_forUsers;
 
-    boolean verification_user; // 1 for club Timisoara and 0 for Zadareni
+    boolean verification_club; // 1 for club Timisoara and 0 for Zadareni
 
     String store_judoClub;
 
@@ -80,7 +80,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                if (Objects.equals(verification_user, false))
+                if (Objects.equals(verification_club, false))
                 {
                     Intent intent = new Intent(getActivity(), GroupSessions.class);
                     startActivity(intent);
@@ -119,9 +119,9 @@ public class HomeFragment extends Fragment {
                 store_judoClub = user_obj.getJudoclub();
 
                 if (Objects.equals(store_judoClub, "Judo Club Timisoara")) {
-                    verification_user = true;
+                    verification_club = true;
                 } else {
-                    verification_user = false;
+                    verification_club = false;
                 }
 
 
