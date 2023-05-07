@@ -36,7 +36,7 @@
             android:name=".All_JudoBelts_classes.Yellow_belt"
             android:exported="true" />
         <activity
-            android:name=".GroupSessions_forTrainers"
+            android:name=".GroupSessions_Timisoara"
             android:exported="true" />
         <activity
             android:name=".JudoHistory"

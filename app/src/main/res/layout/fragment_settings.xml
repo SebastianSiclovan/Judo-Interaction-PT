@@ -26,7 +26,8 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
             android:layout_weight="8"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
@@ -211,87 +212,8 @@
             </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:layout_rowWeight="2"
-                android:layout_columnWeight="2"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="8dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="16dp"
-                    android:background="@color/white"
-                    android:orientation="vertical">
 
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="25dp"
-                        android:src="@drawable/ic_icons8_loading_24"></ImageView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center_horizontal"
-                        android:text="In progress..."
-                        android:textColor="@color/black"
-                        android:textSize="16dp"
-                        android:textStyle="bold"></TextView>
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:layout_rowWeight="2"
-                android:layout_columnWeight="2"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="8dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="16dp"
-                    android:background="@color/white"
-                    android:orientation="vertical">
-
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="25dp"
-                        android:src="@drawable/ic_icons8_loading_24"></ImageView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center_horizontal"
-                        android:text="In progress..."
-                        android:textColor="@color/black"
-                        android:textSize="16dp"
-                        android:textStyle="bold"></TextView>
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
 
 
         </GridLayout>

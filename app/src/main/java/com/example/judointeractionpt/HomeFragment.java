@@ -33,8 +33,14 @@ public class HomeFragment extends Fragment {
 
     DatabaseReference userRef;
     FirebaseUser firebase_user;
-    ;
 
+    DatabaseReference databaseReference;
+
+    DatabaseReference databaseReference_forUsers;
+
+    boolean verification_user; // 1 for club Timisoara and 0 for Zadareni
+
+    String store_judoClub;
 
 
     @Override
@@ -49,9 +55,9 @@ public class HomeFragment extends Fragment {
         groupSessions_btn = view.findViewById(R.id.GroupSessions);
         judoHistory_btn = view.findViewById(R.id.judoHistory);
 
+        firebase_user = FirebaseAuth.getInstance().getCurrentUser();
 
-
-
+        verifyUser(firebase_user);
 
 
         clubDetails_btn.setOnClickListener(new View.OnClickListener() {
@@ -74,8 +80,16 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getActivity(), GroupSessions.class);
-                startActivity(intent);
+                if (Objects.equals(verification_user, false))
+                {
+                    Intent intent = new Intent(getActivity(), GroupSessions.class);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Intent intent = new Intent(getActivity(), GroupSessions_Timisoara.class);
+                    startActivity(intent);
+                }
 
             }
 
@@ -91,31 +105,35 @@ public class HomeFragment extends Fragment {
         });
 
 
-
-
         return view;
-        }
+    }
 
+    private void verifyUser(FirebaseUser firebase_user) {
 
+        FirebaseDatabase.getInstance().getReference().child("Users").child(firebase_user.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                User user_obj = snapshot.getValue(User.class);
 
-                /*
-                store_userEmail = user.getEmail();
+                store_judoClub = user_obj.getJudoclub();
 
-                if (store_userEmail == "siclovansebastian@yahoo.com")
-                {
-                    Intent intent = new Intent(getActivity(), GroupSessions_forTrainers.class);
-                    startActivity(intent);
+                if (Objects.equals(store_judoClub, "Judo Club Timisoara")) {
+                    verification_user = true;
+                } else {
+                    verification_user = false;
                 }
-                else
-                {
-                    Intent intent = new Intent(getActivity(), GroupSessions.class);
-                    startActivity(intent);
-                }
+
 
             }
 
-                 */
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
 
 
 
