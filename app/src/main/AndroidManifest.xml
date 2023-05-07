@@ -18,6 +18,9 @@
         android:theme="@style/Theme.FootballInteractionPT"
         tools:targetApi="31">
         <activity
+            android:name=".ClubPhotos"
+            android:exported="true" />
+        <activity
             android:name=".All_JudoBelts_classes.Brown_belt"
             android:exported="true" />
         <activity
