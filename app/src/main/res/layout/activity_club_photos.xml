@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rosu_judo"
+    tools:context=".ClubPhotos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:ignore="ExtreText">
+
+
+        <RelativeLayout
+            android:id="@+id/RL_clubPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/boxes_bg"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/clubPhotos_availablePhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:drawablePadding="50dp"
+                android:text="Available photos of this club are shown below."
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/clubPhotos_notAvailablePhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:drawablePadding="50dp"
+                android:text="We regret that no photos of this club are available at this time."
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image_ZadareniClub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:srcCompat="@drawable/new_collage" />
+
+        <ImageView
+            android:id="@+id/image_TimisoaraClub"
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:layout_marginTop="140dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/icons8_disappointed_face_96" /><![CDATA[
+
+
+
+
+
+
+        app:layout_constraintTop_toBottomOf="@+id/GridLayout_belts" />
+
+
+    ]]>
+    </LinearLayout>
+</RelativeLayout>
+
