@@ -75,7 +75,7 @@ public class GroupSessions extends AppCompatActivity {
 
         verifyUser(firebase_user);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("calendar events");
+        databaseReference = FirebaseDatabase.getInstance().getReference("CalendarEvents_LazarLoghin");
 
         addEvent.setVisibility(View.GONE);
 
