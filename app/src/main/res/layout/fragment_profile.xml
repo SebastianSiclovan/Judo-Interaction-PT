@@ -166,6 +166,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_phoneNumber"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <Button
         android:id="@+id/profile_uploadImage"
         android:layout_width="0dp"
@@ -173,7 +174,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/signin_signup_background"
+        android:background="@drawable/crem_buttons"
         android:text="Upload image for profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -193,5 +194,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_uploadImage" />
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
