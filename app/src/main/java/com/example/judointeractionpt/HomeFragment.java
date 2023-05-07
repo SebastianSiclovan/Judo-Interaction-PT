@@ -29,7 +29,7 @@ import java.util.Objects;
 
 public class HomeFragment extends Fragment {
 
-    LinearLayout clubDetails_btn, judoBelts_btn, groupSessions_btn, judoHistory_btn;
+    LinearLayout clubDetails_btn, judoBelts_btn, groupSessions_btn, judoHistory_btn, clubPhotos_btn;
 
     DatabaseReference userRef;
     FirebaseUser firebase_user;
@@ -54,6 +54,7 @@ public class HomeFragment extends Fragment {
         judoBelts_btn = view.findViewById(R.id.judoBelts);
         groupSessions_btn = view.findViewById(R.id.GroupSessions);
         judoHistory_btn = view.findViewById(R.id.judoHistory);
+        clubPhotos_btn = view.findViewById(R.id.clubPhotos);
 
         firebase_user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -64,6 +65,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), ClubDetails.class);
+                startActivity(intent);
+            }
+        });
+
+        clubPhotos_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ClubPhotos.class);
                 startActivity(intent);
             }
         });
