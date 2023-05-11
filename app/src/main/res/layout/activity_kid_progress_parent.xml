@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rosu_judo"
+    tools:context=".KidProgress_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:ignore="ExtreText">
+
+
+        <RelativeLayout
+            android:id="@+id/RL_kidProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/crem_buttons"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/kidProgress_firstText_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:drawablePadding="50dp"
+                android:text="Welcome dear parent, below you can see more details about your child's progress based on the child's unique code chosen at registration"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/green"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RL2_kidProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/crem"
+            android:padding="15dp">
+
+            <EditText
+                android:id="@+id/kidCode_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/boxes_bg"
+                android:hint="Child's unique code"
+                android:inputType="textPersonName"
+                android:padding="6dp"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/kidName_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_below="@+id/kidCode_parent"
+                android:hint="Name:"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:padding="6dp"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/kidBelt_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kidName_parent"
+                android:layout_marginTop="16dp"
+                android:hint="Belt type:"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:padding="6dp"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/kidCurrentWeek_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kidBelt_parent"
+                android:layout_marginTop="16dp"
+                android:hint="Current week:"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:padding="6dp"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/kidPresentWeek_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kidCurrentWeek_parent"
+                android:layout_marginTop="16dp"
+                android:hint="Number present this week:"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:padding="6dp"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/kidSessions_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kidPresentWeek_parent"
+                android:layout_marginTop="16dp"
+                android:hint="number of training sessions:"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:padding="6dp"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/kidQualification_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kidSessions_parent"
+                android:layout_marginTop="16dp"
+                android:hint="Qualification given:"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:padding="6dp"
+                android:textColorHint="#000000"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/kidProgress_sendCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kidCode_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/green_buttons"
+                android:text="SEND CODE" />
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
