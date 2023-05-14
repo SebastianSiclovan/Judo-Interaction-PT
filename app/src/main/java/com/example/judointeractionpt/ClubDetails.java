@@ -72,7 +72,7 @@ public class ClubDetails extends AppCompatActivity {
             }
         });
 
-
+//
     }
 
     private void userInformation() {
