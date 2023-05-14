@@ -1,9 +1,11 @@
 package com.example.judointeractionpt;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -38,7 +40,7 @@ import java.util.regex.Pattern;
 public class Register extends AppCompatActivity {
     // Variabilele required
     public
-        EditText my_email, my_userName, my_Password, my_firstName, my_lastName, my_phoneNumber;
+        EditText my_email, my_userName, my_Password, my_firstName, my_lastName, my_phoneNumber, my_kidTocken;
         Button my_RegisterBtn;
         TextView my_LoginBtn;
         FirebaseAuth FireBase_Auth;
@@ -49,6 +51,9 @@ public class Register extends AppCompatActivity {
         PhoneNumberUtil phoneNumberUtil;
         PhoneNumberUtil phoneUtil;
         AutoCompleteTextView judoClubAutocomplete;
+
+        boolean isTrainer = false;
+        String [] Trainers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +71,7 @@ public class Register extends AppCompatActivity {
         my_firstName = findViewById(R.id.register_firstName);
         my_lastName = findViewById(R.id.register_lastName);
         my_phoneNumber = findViewById(R.id.phoneNumber);
+        my_kidTocken = findViewById(R.id.KidTocken);
 
         country_codeP = findViewById(R.id.ccp);
         country_codeP.setContentColor(Color.WHITE);
@@ -73,6 +79,8 @@ public class Register extends AppCompatActivity {
         my_phoneNumber = findViewById(R.id.phoneNumber);
 
         judoClubAutocomplete = findViewById(R.id.judo_clubs);
+
+        userVerification();
 
         // The following code will offer posibility of a user to select the judo club in that he is
         // Storage of club will be in an array which are in strings.xml (res/values/strings.xml)
@@ -155,10 +163,14 @@ public class Register extends AppCompatActivity {
                 String firstName = my_firstName.getText().toString().trim();
                 String lastName = my_lastName.getText().toString().trim();
                 String judoClubs = judoClubAutocomplete.getText().toString().trim();
+                String kidTocken = my_kidTocken.getText().toString().trim();
 
                 // Get the selected country code and name
                 String countryCode = country_codeP.getSelectedCountryCode();
                 String countryName = country_codeP.getSelectedCountryName();
+
+                String [] judoClubs_available = new String[] {"Judo Club Zadareni", "Judo Club Timisoara"};
+                String [] Trainers_available = new String[] {"siclovansebastian@yahoo.com", "antrenorjudo_timisoara@yahoo.com"};
 
                 // Use the selected country code and phone number to create a full phone number
                 String phoneNumber_withoutCountryCode = my_phoneNumber.getText().toString();
@@ -178,38 +190,74 @@ public class Register extends AppCompatActivity {
                 }
 
 
+
+
+
                 // Verification if Full name field is empty
 
                 if (TextUtils.isEmpty(username)) {
                     my_userName.setError("Please complete the full name field");
                     return;
                 }
+                if (TextUtils.isEmpty(firstName)) {
+                    my_firstName.setError("Please complete the first name field");
+                }
+                if (TextUtils.isEmpty(lastName))
+                {
+                    my_lastName.setError("Please complete the last name field");
+                    return;
+                }
 
                 // Verification if email field is empty
-                else if (TextUtils.isEmpty(email)) {
+                if (TextUtils.isEmpty(email)) {
                     my_email.setError("Please complete the email field");
                     return;
                 }
 
                 // Verification if password field is emply
-                else if (TextUtils.isEmpty(password)) {
+                if (TextUtils.isEmpty(password)) {
                     my_Password.setError("Please complete the password field");
                     return;
-                } else if (TextUtils.isEmpty(firstName)) {
-                    my_firstName.setError("Please complete the first name field");
                 }
-                else if (TextUtils.isEmpty(lastName))
+                if (isTrainer)
                 {
-                    my_lastName.setError("Please complete the last name field");
-                    return;
+                    boolean isValidEmail = false;
+                    for (String trainerEmail : Trainers_available) {
+                        if (email.equals(trainerEmail)) {
+                            isValidEmail = true;
+                            break;
+                        }
+                    }
+
+                    if (!isValidEmail) {
+                        my_email.setError("You can't create a legitimate trainer account with this email address");
+                        return;
+                    }
+
                 }
-                else if (TextUtils.isEmpty(judoClubs))
+
+                if (TextUtils.isEmpty(judoClubs))
                 {
                     judoClubAutocomplete.setError("Please select a judo club");
                     return;
                 }
+                if (judoClubs.equals("Judo Club Zadareni") || judoClubs.equals("Judo Club Timisoara"))
+                {
+                    // club valid
+                }else {
+                    judoClubAutocomplete.setError("The entered club is invalid, the only valid clubs are \"Judo Club Zadareni\" and \"Judo Club Timisoara\"");
+                    return;
+                }
+
+                if (!isTrainer)
+                {
+                    if (TextUtils.isEmpty(kidTocken)) {
+                            my_kidTocken.setError("Please complete Child's unique code");
+                            return;
+                    }
+                }
                 // Verification if password is GT 6 characters
-                else if (password.length() < 6) {
+                if (password.length() < 6) {
                     my_Password.setError("Please enter password >= 6 characters");
                     return;
                 } else {
@@ -243,6 +291,49 @@ public class Register extends AppCompatActivity {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(phoneNumber);
         return matcher.matches();
+    }
+
+    private void userVerification() {
+
+        // Setup the Alert Builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
+        builder.setTitle("Person verification");
+        builder.setMessage("Do you use the app as a coach or as a parent?");
+
+        builder.setPositiveButton("Trainer", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                isTrainer = true;
+                my_kidTocken.setVisibility(View.GONE);
+
+
+
+            }
+        });
+
+        // Return to User Profile Activity if User presses Cancel Button
+        builder.setNegativeButton("Parent", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                isTrainer = false;
+
+            }
+        });
+
+        // Create the AlertDialog
+        AlertDialog alertDialog = builder.create();
+
+        // change color of button continue
+        alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialogInterface) {
+
+
+            }
+        });
+
+        // Show the AlertDialog
+        alertDialog.show();
     }
 
 

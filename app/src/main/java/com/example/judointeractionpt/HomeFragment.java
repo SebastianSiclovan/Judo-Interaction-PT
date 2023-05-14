@@ -31,16 +31,12 @@ public class HomeFragment extends Fragment {
     DatabaseReference userRef;
     FirebaseUser firebase_user;
 
-    DatabaseReference databaseReference;
-
-    DatabaseReference databaseReference_forUsers;
 
     boolean verification_club; // 1 for club Timisoara and 0 for Zadareni
     boolean verification_user; // 1 for trainer and 0 for parent
 
     String store_judoClub;
     String store_TypeOfUser;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
