@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
@@ -121,7 +120,7 @@
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_white_belt.xml" value="0.3903985507246377" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_yellow.xml" value="0.3903985507246377" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/activity_yellow_belt.xml" value="0.3903985507246377" />
-        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/fragment_home.xml" value="0.18518518518518517" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/fragment_profile.xml" value="0.4" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/layout/fragment_settings.xml" value="0.33" />
         <entry key="..\:/Judo-Interaction-PT/app/src/main/res/menu/bottom_nav_menu.xml" value="0.42916666666666664" />
@@ -150,7 +149,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

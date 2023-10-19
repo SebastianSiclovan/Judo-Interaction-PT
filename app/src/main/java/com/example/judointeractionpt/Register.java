@@ -196,7 +196,7 @@ public class Register extends AppCompatActivity {
                 // Verification if Full name field is empty
 
                 if (TextUtils.isEmpty(username)) {
-                    my_userName.setError("Please complete the full name field");
+                    my_userName.setError("Please complete the user name field");
                     return;
                 }
                 if (TextUtils.isEmpty(firstName)) {
